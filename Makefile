@@ -15,7 +15,7 @@ CXXFLAGS = -Wall -I /scratch/perkins/include
 LDFLAGS = -L /scratch/perkins/lib
 LDLIBS = -l cdk -lcurses
 EXEC = project6
-SRCS = example1.cc
+SRCS = project6.cc matrix.cc
 OBJS = $(SRCS:cc=o)
 PROJECTNAME= Project6
 
