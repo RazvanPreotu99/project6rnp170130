@@ -18,7 +18,7 @@
 
 #include <stdint.h>
 
-// class definition
+// BinaryFileHeader class definition
 class BinaryFileHeader
 {
 
@@ -26,11 +26,22 @@ class BinaryFileHeader
 
   uint32_t magicNumber;
   uint32_t versionNumber;
-  uint64_t numrecords;
+  uint64_t numRecords;
 };
 
-// function prototypes
-void displayMatrix(BinaryFileHeader*);
-void readBinary(BinaryFileHeader*);
+// Constant
+const int maxRecordStringLength = 25;
+
+// BinaryFileRecord class definition
+class BinaryFileRecord
+{
+ public:
+
+  uint8_t strLength;
+  char stringBuffer[maxRecordStringLength];
+};
+
+// Function prototype
+void displayMatrix(BinaryFileHeader*,BinaryFileRecord*[]);
 
 #endif
